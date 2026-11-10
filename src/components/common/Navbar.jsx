@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, UtensilsCrossed } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "../../lib/utils";
+import Logo from "./Logo";
 
 const links = [
   { label: "About", to: "/#about" },
@@ -50,11 +51,8 @@ export default function Navbar() {
       )}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2 text-amber-400">
-          <UtensilsCrossed size={22} />
-          <span className="font-serif text-xl tracking-[0.25em] text-white">
-            AURELIA
-          </span>
+        <Link to="/" aria-label="AURELIA Home">
+          <Logo variant="horizontal" size="sm" />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

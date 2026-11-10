@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Clock, MapPin, Phone, Wine, Globe, Share2, Check } from "lucide-react";
+import Logo from "./Logo";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -17,8 +18,8 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-[#0c0d10] text-zinc-400">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link to="/" className="font-serif text-2xl tracking-[0.25em] text-white">
-            AURELIA
+          <Link to="/" aria-label="AURELIA Home">
+            <Logo variant="horizontal" size="md" />
           </Link>
           <p className="mt-4 text-sm leading-relaxed">
             Fine dining rooted in heritage, told through fire, cellar and season.
